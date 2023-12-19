@@ -5,6 +5,7 @@ from car_detect_censored_API import Detector
 if __name__ == '__main__':
     detector = Detector()
     # 调用模型
+    # image source: https://st.hotrod.com/uploads/sites/21/2015/07/personalized-license-plates-from-mustang-week-2015-31.jpg
     img = cv2.imread('car_detect/inference/images/personalized-license-plates-from-mustang-week-2015-31-138212729.jpg')
     pic_box_np, pic_censored_np = detector.detect(img)
     cv2.imshow('box pic',pic_box_np)
