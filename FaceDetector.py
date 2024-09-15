@@ -7,7 +7,7 @@ from random import randint
 from car_detect.utils.datasets import letterbox
 
 
-class FaceDetector(object):
+class FaceDetectorFacade(object):
 
     def __init__(self, img_size):
         self.img_size = img_size

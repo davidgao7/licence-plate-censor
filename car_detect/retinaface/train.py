@@ -6,7 +6,7 @@ import torch.backends.cudnn as cudnn
 import argparse
 import torch.utils.data as data
 from data import WiderFaceDetection, detection_collate, preproc, cfg_mnet, cfg_re50
-from layers.modules import MultiBoxLoss
+from layers.modules.multibox_loss import MultiBoxLoss
 from layers.functions.prior_box import PriorBox
 import time
 import datetime
@@ -37,11 +37,15 @@ elif args.network == "resnet50":
 
 rgb_mean = (104, 117, 123) # bgr order
 num_classes = 2
-img_dim = cfg['image_size']
-num_gpu = cfg['ngpu']
-batch_size = cfg['batch_size']
-max_epoch = cfg['epoch']
-gpu_train = cfg['gpu_train']
+
+if cfg:
+    img_dim = cfg['image_size']
+    num_gpu = cfg['ngpu']
+    batch_size = cfg['batch_size']
+    max_epoch = cfg['epoch']
+    gpu_train = cfg['gpu_train']
+else:
+    raise ValueError("no config named: %s" % args.network)
 
 num_workers = args.num_workers
 momentum = args.momentum

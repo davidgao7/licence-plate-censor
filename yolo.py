@@ -11,7 +11,7 @@ import torch.nn as nn
 from PIL import Image, ImageDraw, ImageFont
 
 from car_detect.nets.yolo4 import YoloBody
-from utils.utils_1 import (DecodeBox, letterbox_image, non_max_suppression, yolo_correct_boxes)
+from car_detect.utils.utils_1 import (DecodeBox, letterbox_image, non_max_suppression, yolo_correct_boxes)
 import cv2
 
 # 自己的path可以自行修改

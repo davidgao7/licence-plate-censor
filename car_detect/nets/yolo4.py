@@ -81,7 +81,7 @@ def yolo_head(filters_list, in_filters):
     return m
 
 #---------------------------------------------------#
-#   yolo_body
+#   yolo_body (yolov4)
 #---------------------------------------------------#
 class YoloBody(nn.Module):
     def __init__(self, num_anchors, num_classes):
