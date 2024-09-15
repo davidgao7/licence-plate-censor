@@ -7,7 +7,7 @@ import numpy as np
 import cv2
 
 # Load the PyTorch model
-model = torch.load("/content/runs/detect/train/weights/best.pt")
+model = torch.load("best.pt")
 
 app = Flask(__name__)
 # run_with_ngrok(app)  # Start ngrok when the app is run
