@@ -13,5 +13,5 @@
 - detect and mark license plate
 - recognize the text on the license plate [not yet]
 
-![](LicensePlateCensorAPI.png)
+![](LicenceplateDetection.png)
 
