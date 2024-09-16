@@ -1,15 +1,17 @@
 # License Plate Censor API
 
 ## Tech use
+
 - Pytorch
 - Yolov5
 - Docker
 - Flask
 
-`detect.py`: main plate detector logic 
+`detect.py`: main plate detector logic
+
 - count tracks
 - detect and mark license plate
 - recognize the text on the license plate [not yet]
 
+![](LicensePlateCensorAPI.png)
 
-![](wp3492986-3748640878.png)
